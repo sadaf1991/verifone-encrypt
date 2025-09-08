@@ -1,6 +1,8 @@
 import * as openpgp from 'openpgp';
 
-const base64PublicKey = api/encrypt.js
+const base64PublicKey = `
+LS0tLS1CRUdJTiBQR1AgUFVCTElDIEtFWSBCTE9DSy0tLS0tClZlcnNpb246IEJDUEcgdjEuNjIKCm1FOEVhSDRnUGhNRks0RUVBQW9DQXdRQVNhR0ZEa0xSS29sMVA2TjhEQUpkMUt0SEpKKzR6NkNtVjM5bkRpQksKdE4wdEJiM3lZeGxHZkpWTmxlczFGRTVhd2NEdmF3OVJwOEkzZWcxZm5BQU50QUNJZEFRVEV3Z0FIQVVDYUg0ZwpQZ0liQXdZTENRZ0hBd0lHRlFnQ0NRb0xCQllDQXdFQUNna1FuRWxET3M0cFQ4SWJiUUVBMVdSTEhXOWY5RERUCmFqbDgyR3J2VHFxa2psYjZQYmVCeTJEWDZKcEd5ckVBL2lJbmVSblI0ejRKYmE3ejBqVDVQckhhYW5iTWVtUGkKYlJSZHpuczFPQjNzdUZNRWFINGdQaElGSzRFRUFBb0NBd1FBU2FHRkRrTFJLb2wxUDZOOERBSmQxS3RISkorNAp6NkNtVjM5bkRpQkt0TjB0QmIzeVl4bEdmSlZObGVzMUZFNWF3Y0R2YXc5UnA4STNlZzFmbkFBTkF3RUlCNGhuCkJCZ1RDQUFQQWhzTUJRa0paZ0dBQlFKb2ZpQStBQW9KRUp4SlF6ck9LVS9DODBFQS9qc1grTVExWFQ3OEIxSkkKN3QzTFNyL3JpSkppbmp4bGk0QmQwSHNtSHFMK0FQNHdDUmkxUmZZQUdvOGxWT29aZlBXZTErc2VJckxDRkJOTgovZ2lHUDZITXJRPT0KPWtWb20KLS0tLS1FTkQgUEdQIFBVQkxJQyBLRVkgQkxPQ0stLS0tLQo=
+`.trim();
 
 function rfc3339UTC(d = new Date()) {
   return d.toISOString().replace(/\.\d{3}Z$/, 'Z');
@@ -10,7 +12,7 @@ function json(status, data = {}) {
   return {
     statusCode: status,
     headers: {
-      'Access-Control-Allow-Origin': '*',      // tighten to your domain later
+      'Access-Control-Allow-Origin': '*', 
       'Access-Control-Allow-Methods': 'POST,OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type'
     },
