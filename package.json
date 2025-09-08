@@ -1,0 +1,9 @@
+{
+  "name": "verifone-encrypt",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "openpgp": "^5.10.1"
+  }
+}
